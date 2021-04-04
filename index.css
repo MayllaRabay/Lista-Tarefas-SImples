@@ -2,18 +2,39 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Syne Mono', monospace;
+    font-family: 'Kiwi Maru', serif;
 }
 body {
-    background-image: url(background-image.jpg);
+    background-image: url(assets/background-image.jpg);
 }
 .card-tarefas {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
     margin: 60px auto;
-    background-image: url(background-tarefas.jpg);
-    max-width: fit-content;
+    background-image: url(assets/background-tarefas.jpg);
     padding: 2em;
     border-radius: 0.5em;
 }
 form {
     margin: 1em;
+}
+ul {
+    list-style: none;
+}
+li {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+}
+li input {
+    margin-right: 0.5em;
+}
+li button {
+    padding: 0.2em;
+    margin-left: auto;
+}
+.feitas {
+    text-decoration: line-through;
 }
