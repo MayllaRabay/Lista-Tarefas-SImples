@@ -4,6 +4,13 @@ const input = form.querySelector("input");
 const aFazer = document.querySelector(".a-fazer");
 const feitas = document.querySelector("feitas");
 
+function deletarTarefa(event) {
+    const deleteButton = event.target;
+    const tarefa = deleteButton.closest("li");
+
+    tarefa.remove();
+}
+
 form.addEventListener("submit", event => {
     event.preventDefault();
 
@@ -18,6 +25,8 @@ form.addEventListener("submit", event => {
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Deletar";
 
+    deleteButton.addEventListener("click", deletarTarefa);
+
     tarefa.append(checkbox);
     tarefa.append(text);
     tarefa.append(deleteButton);
@@ -25,4 +34,4 @@ form.addEventListener("submit", event => {
     aFazer.append(tarefa);
 
     input.value = "";
-});
+})
