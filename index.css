@@ -35,6 +35,6 @@ li button {
     padding: 0.2em;
     margin-left: auto;
 }
-.feitas {
+.feitas span {
     text-decoration: line-through;
 }
